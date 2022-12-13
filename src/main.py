@@ -56,9 +56,9 @@ async def get_stations(
 
     result = []
     for station in stations.values():
-        if available_bike_filter and station['available_bikes'] == 0:
+        if available_bike_filter and station.available_bikes == 0:
             continue
-        if available_dock_filter and station['available_docks'] == 0:
+        if available_dock_filter and station.available_docks == 0:
             continue
 
         result.append(station)
